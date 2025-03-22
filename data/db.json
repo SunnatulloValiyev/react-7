@@ -1,0 +1,104 @@
+{
+    "desserts": [
+      {
+        "image": {
+          "thumbnail": "images/waffleDesctop.png",
+          "mobile": "images/waffleMobile.png",
+          "tablet": "images/waffleTablet.png",
+          "desktop": "images/waffleDesctop.png"
+        },
+        "name": "Waffle with Berries",
+        "category": "Waffle",
+        "price": 6.5
+      },
+      {
+        "image": {
+          "thumbnail": "/images/vanillaDesctop.png",
+          "mobile": "/images/vanillaMobile.png",
+          "tablet": "/images/vanillaTablet.png",
+          "desktop": "/images/vanillaDesctop.png"
+        },
+        "name": "Vanilla Bean Crème Brûlée",
+        "category": "Crème Brûlée",
+        "price": 7.0
+      },
+      {
+        "image": {
+          "thumbnail": "/images/macaronDesctop.png",
+          "mobile": "/images/macaronMobile.png",
+          "tablet": "/images/macaronTablet.png",
+          "desktop": "/images/macaronDesctop.png"
+        },
+        "name": "Macaron Mix of Five",
+        "category": "Macaron",
+        "price": 8.0
+      },
+      {
+        "image": {
+          "thumbnail": "/images/classicDesctop.png",
+          "mobile": "/images/classicMobile.png",
+          "tablet": "/images/classicTablet.png",
+          "desktop": "/images/classicDesctop.png"
+        },
+        "name": "Classic Tiramisu",
+        "category": "Tiramisu",
+        "price": 5.5
+      },
+      {
+        "image": {
+          "thumbnail": "images/pistachioDesctop.png",
+          "mobile": "images/pistachioMobile.png",
+          "tablet": "images/pistachioTablet.png",
+          "desktop": "images/pistachioDesctop.png"
+        },
+        "name": "Pistachio Baklava",
+        "category": "Baklava",
+        "price": 4.0
+      },
+      {
+        "image": {
+          "thumbnail": "images/LemonDesctop.png",
+          "mobile": "images/LemonMobile.png",
+          "tablet": "images/LemonTablet.png",
+          "desktop": "images/LemonDesctop.png"
+        },
+        "name": "Lemon Meringue Pie",
+        "category": "Pie",
+        "price": 5.0
+      },
+      {
+        "image": {
+          "thumbnail": "images/redCakeDesctop.png",
+          "mobile": "images/redCakeMobile.png",
+          "tablet": "images/redCakeTablet.png",
+          "desktop": "images/redCakeDesctop.png"
+        },
+        "name": "Red Velvet Cake",
+        "category": "Cake",
+        "price": 4.5
+      },
+      {
+        "image": {
+          "thumbnail": "images/saltedDesctop.png",
+          "mobile": "images/saltedMobile.png",
+          "tablet": "images/saltedTablet.png",
+          "desktop": "images/saltedDesctop.png"
+        },
+        "name": "Salted Caramel Brownie",
+        "category": "Brownie",
+        "price": 4.5
+      },
+      {
+        "image": {
+          "thumbnail": "images/vanillaPDesctop.png",
+          "mobile": "images/vanillaPMobile.png",
+          "tablet": "images/vanillaPTablet.png",
+          "desktop": "images/vanillaPDesctop.png"
+        },
+        "name": "Vanilla Panna Cotta",
+        "category": "Panna Cotta",
+        "price": 6.5
+      }
+    ]
+  }
+  
