@@ -139,6 +139,7 @@ body {
   margin-top: 7px;
 }
 
+
 .name-p {
   margin-top: 5px;
   color: #C73B0F;
@@ -177,7 +178,6 @@ body {
 
 .dessert-item {
   flex: 1 1 calc(33.33% - 20px);
-  text-align: center;
 }
 
 .dessert-image {
