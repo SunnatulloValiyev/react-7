@@ -1,44 +1,25 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useGlobalContext } from "../context/GlobalContext";
 
 function AddDessertButton({ id }) {
-  const clickedKey = `clicked_${id}`;
-  const countKey = `count_${id}`;
+  const { cart, dispatch } = useGlobalContext();
+  const [clicked, setClicked] = useState(false);
+  const [count, setCount] = useState(1);
 
-  const storedClicked = JSON.parse(localStorage.getItem(clickedKey)) || false;
-  const storedCount = JSON.parse(localStorage.getItem(countKey)) || 1;
-
-  const [clicked, setClicked] = useState(storedClicked);
-  const [count, setCount] = useState(storedCount);
-
-  useEffect(() => {
-    localStorage.setItem(clickedKey, JSON.stringify(clicked));
-    localStorage.setItem(countKey, JSON.stringify(count));
-  }, [clicked, count]);
+  const handleAddToCart = () => {
+    setClicked(true);
+    dispatch({ type: "ADD_TO_CART", payload: { id, count } });
+  };
 
   return (
-    <button
-      onClick={() => setClicked(!clicked)}
-      className={`addDessert ${clicked ? "back" : "clicked"}`}
-    >
-      {clicked ? (
+    <button onClick={handleAddToCart} className={`addDessert ${clicked ? "back" : "clicked"}`}>
+      {cart.find((item) => item.id === id) ? (
         <div className="counter">
-          <button
-            className="minus"
-            onClick={(e) => {
-              e.stopPropagation();
-              setCount((prevCount) => Math.max(prevCount - 1, 1)); 
-            }}
-          >
+          <button className="minus" onClick={() => dispatch({ type: "DECREMENT", payload: id })}>
             -
           </button>
-          <span>{count}</span>
-          <button
-            className="plus"
-            onClick={(e) => {
-              e.stopPropagation();
-              setCount((prevCount) => prevCount + 1);
-            }}
-          >
+          <span>{cart.find((item) => item.id === id)?.count}</span>
+          <button className="plus" onClick={() => dispatch({ type: "INCREMENT", payload: id })}>
             +
           </button>
         </div>

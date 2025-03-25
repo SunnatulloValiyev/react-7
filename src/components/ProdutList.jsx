@@ -1,13 +1,12 @@
 import { useState } from "react";
 import AddDessertButton from "./addBtn";
 
-function ProdutList({ desserts, isPending }) {
+function ProductList({ desserts, isPending }) {  
   const [clickedCard, setClickedCard] = useState(null);
 
   const handleClick = (index) => {
     setClickedCard(index);
   };
-
 
   return (
     <div className="desserts">
@@ -22,7 +21,7 @@ function ProdutList({ desserts, isPending }) {
                 className={`dessert-item ${clickedCard === index ? "clicked" : ""}`}
               >
                 {p.image.thumbnail && <img src={p.image.thumbnail} alt="" />}
-                <AddDessertButton onClick={() => handleClick(index)} />
+                <AddDessertButton id={p.name} onClick={() => handleClick(index)} />
                 {p.category && <span className="category">{p.category}</span>}
                 {p.name && <h2 className="name">{p.name}</h2>}
                 {p.price && <h2 className="name-p">{p.price} $</h2>}
@@ -34,4 +33,4 @@ function ProdutList({ desserts, isPending }) {
   );
 }
 
-export default ProdutList;
+export default ProductList; 
